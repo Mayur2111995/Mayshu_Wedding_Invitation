@@ -1,6 +1,6 @@
 // ===== Settings =====
 var ADMIN_KEY = 'CHANGE-THIS-SECRET';   // password for admin.html (keep it private)
-var NOTIFY_PHONE = '919067853112';       // host WhatsApp number (optional alerts)
+var NOTIFY_PHONE = '9067853112';       // host WhatsApp number (optional alerts)
 var NTFY_TOPIC = '';                     // instant phone push (free): pick a long secret name, e.g. mayshu-rsvp-8f3k2x9q
 var CALLMEBOT_APIKEY = '';               // optional WhatsApp alert to NOTIFY_PHONE
 var SHEET_NAME = 'Guests';
