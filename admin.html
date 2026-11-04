@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Guest List | Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="admin-page">
+  <main class="admin">
+    <h1 class="admin-title">Guest List</h1>
+    <p class="admin-sub">Mayur weds Ashwini | Invitation logins</p>
+
+    <form class="admin-key" id="keyForm">
+      <input id="keyInput" type="password" placeholder="Admin key" autocomplete="current-password" required>
+      <button class="btn" type="submit">View Guests</button>
+    </form>
+    <p class="gate-error" id="adminError" role="alert"></p>
+
+    <section id="panel" hidden>
+      <div class="stats">
+        <div><b id="statLogins">0</b><span>Invitees logged in</span></div>
+        <div><b id="statGuests">0</b><span>Total guests coming</span></div>
+      </div>
+
+      <div class="admin-tools">
+        <input id="search" type="search" placeholder="Search name or mobile">
+        <button class="btn btn-outline" id="refresh" type="button">Refresh</button>
+        <button class="btn btn-outline" id="csv" type="button">Download CSV</button>
+        <a class="btn" id="waSummary" target="_blank" rel="noopener" href="#">Send summary on WhatsApp</a>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>Mobile</th><th>Guests</th><th>Logged in</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="./config.js"></script>
+  <script src="./admin.js"></script>
+</body>
+</html>

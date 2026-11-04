@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome | Mayur weds Ashwini</title>
+  <meta name="description" content="You are invited to the wedding of Mayur & Ashwini, 17-19 December 2026, Shirpur.">
+  <meta property="og:title" content="Mayur weds Ashwini - Wedding Invitation">
+  <meta property="og:description" content="17-19 December 2026 | Motel Ahilya Lawns, Shirpur, Dhule">
+  <meta property="og:image" content="https://mayur2111995.github.io/MayshuWedding/images/venue.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="login-page">
+
+  <main class="gate" id="gate">
+    <img class="floral floral-l" src="./images/floral-left.jpg" alt="" onerror="this.style.display='none'">
+    <img class="floral floral-r" src="./images/floral-right.jpg" alt="" onerror="this.style.display='none'">
+
+    <form class="gate-box" id="gateForm" novalidate>
+      <p class="om">॥ श्री गणेशाय नमः ॥</p>
+
+      <h1 class="gate-names">
+        <span class="n1">Mayur</span>
+        <span class="weds">weds</span>
+        <span class="n2">Ashwini</span>
+      </h1>
+
+      <p class="gate-lead">You are cordially invited. Please enter your details to open the wedding invitation.</p>
+
+      <label for="gName">Your name</label>
+      <input id="gName" name="name" type="text" autocomplete="name" placeholder="Full name" required>
+
+      <label for="gMobile">Mobile number</label>
+      <input id="gMobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" maxlength="17" required>
+
+      <label for="gGuests">Total guests coming (including you)</label>
+      <select id="gGuests" name="guests">
+        <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option>
+        <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+        <option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10+</option>
+      </select>
+
+      <p class="gate-error" id="gateError" role="alert"></p>
+      <button class="btn gate-btn" type="submit" id="gateBtn">Open Invitation</button>
+      <p class="gate-note">Your details are shared only with the hosts, to plan the celebrations.</p>
+    </form>
+  </main>
+
+  <script src="./config.js"></script>
+  <script src="./login.js"></script>
+</body>
+</html>

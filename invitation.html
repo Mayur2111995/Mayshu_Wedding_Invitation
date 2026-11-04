@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mayur weds Ashwini | Wedding Invitation</title>
+  <script>
+    // Guests must log in first
+    try { if (!localStorage.getItem('mayshuGuest')) location.replace('index.html'); } catch (e) {}
+  </script>
+
+  <meta name="description" content="You are invited to the wedding festivities of Mayur & Ashwini, 17-19 December 2026, Motel Ahilya Lawns, Shirpur.">
+
+  <meta property="og:title" content="Mayur weds Ashwini - Wedding Invitation">
+  <meta property="og:description" content="17-19 December 2026 | Motel Ahilya Lawns, Shirpur, Dhule">
+  <meta property="og:image" content="https://mayur2111995.github.io/MayshuWedding/images/venue.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    /* Image loading and fallback improvements */
+
+    .arch {
+      position: relative;
+      overflow: hidden;
+      background: #efe3c5;
+    }
+
+    .arch img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .arch img.image-error {
+      display: none;
+    }
+
+    .card img,
+    .venue-img,
+    .floral {
+      display: block;
+      max-width: 100%;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .venue-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .floral {
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .couple-grid {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body class="ready">
+
+  <!-- Background Music -->
+  <audio
+    id="bgm"
+    src="./audio/song.mp3"
+    loop
+    preload="none">
+  </audio>
+
+  <button
+    class="music"
+    id="musicBtn"
+    type="button"
+    aria-label="Play or pause music"
+    title="Music">
+
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+      <path id="musicIcon" fill="currentColor" d="M8 5v14l11-7z"/>
+    </svg>
+
+  </button>
+
+  <!-- NAV -->
+  <nav class="topnav" aria-label="Main">
+    <a class="brand" href="#home">M &amp; A</a>
+    <div class="navlinks" id="navlinks">
+      <a href="#home">Home</a>
+      <a href="#couple">Couple</a>
+      <a href="#events">Events</a>
+      <a href="#venue">Venue</a>
+      <a href="#rsvp">RSVP</a>
+    </div>
+    <p class="who"><span id="whoName"></span> <a href="#" id="logout">Switch</a></p>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero" id="home">
+
+    <img
+      class="floral floral-l"
+      src="./images/floral-left.jpg"
+      alt=""
+      loading="eager"
+      onerror="this.style.display='none'">
+
+    <img
+      class="floral floral-r"
+      src="./images/floral-right.jpg"
+      alt=""
+      loading="eager"
+      onerror="this.style.display='none'">
+
+    <div class="hero-inner">
+
+      <p class="om">॥ श्री गणेशाय नमः ॥</p>
+
+      <p class="lead">
+        With the blessings of our elders and the grace of the Almighty, we joyfully invite you to celebrate the wedding of
+      </p>
+
+      <h1 class="names" aria-label="Mayur weds Ashwini">
+        <span class="n1">Mayur</span>
+        <span class="weds">weds</span>
+        <span class="n2">Ashwini</span>
+      </h1>
+
+      <p class="tagline">
+        Your presence and blessings will make our celebrations truly special.
+      </p>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+
+        <div>
+          <b id="d">--</b>
+          <span>Days</span>
+        </div>
+
+        <div>
+          <b id="h">--</b>
+          <span>Hours</span>
+        </div>
+
+        <div>
+          <b id="m">--</b>
+          <span>Minutes</span>
+        </div>
+
+        <div>
+          <b id="s">--</b>
+          <span>Seconds</span>
+        </div>
+
+      </div>
+
+      <p class="count-note" id="countNote">
+        till the Vaidik Wedding, 19 December 2026 at 8:33 AM
+      </p>
+
+      <a class="scroll" href="#events">
+        Wedding Celebrations
+      </a>
+
+    </div>
+  </header>
+
+  <!-- COUPLE SECTION -->
+  <section class="couple" id="couple">
+
+    <h2 class="section-title">The Couple</h2>
+
+    <div class="divider">
+      <i></i>
+    </div>
+
+    <div class="couple-grid">
+
+      <!-- Groom -->
+      <figure class="person">
+
+        <div class="arch" data-initial="M">
+
+          <img
+            src="./images/groom.jpg"
+            alt="Mayur - The Groom"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            onerror="this.classList.add('image-error')">
+
+        </div>
+
+        <figcaption>
+          <span class="pname green">Mayur</span>
+          <span class="prole">The Groom</span>
+        </figcaption>
+
+      </figure>
+
+      <div class="heart" aria-hidden="true">&amp;</div>
+
+      <!-- Bride -->
+      <figure class="person">
+
+        <div class="arch" data-initial="A">
+
+          <img
+            src="./images/bride.jpg"
+            alt="Ashwini - The Bride"
+            loading="eager"
+            decoding="async"
+            onerror="this.classList.add('image-error')">
+
+        </div>
+
+        <figcaption>
+          <span class="pname maroon">Ashwini</span>
+          <span class="prole">The Bride</span>
+        </figcaption>
+
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- WEDDING EVENTS -->
+  <main id="events" class="events">
+
+    <h2 class="section-title">Wedding Celebrations</h2>
+
+    <div class="divider">
+      <i></i>
+    </div>
+
+    <!-- 17 DECEMBER -->
+    <section class="day">
+
+      <div class="day-head">
+        <span class="num">17</span>
+        <span class="meta">December 2026<br>Thursday</span>
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+
+          <img
+            src="./images/mehndi.jpg"
+            alt="Mehndi"
+            loading="eager"
+            decoding="async">
+
+          <h3 class="green">Mehndi Ceremony</h3>
+          <p class="time">11:00 AM</p>
+          <p class="where">Motel Ahilya Lawns</p>
+
+        </article>
+
+        <article class="card">
+
+          <img
+            src="./images/sangeet.jpg"
+            alt="Sangeet"
+            loading="eager"
+            decoding="async">
+
+          <h3>Sangeet Night</h3>
+          <p class="time">8:30 PM</p>
+          <p class="where">Motel Ahilya Lawns</p>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 18 DECEMBER -->
+    <section class="day">
+
+      <div class="day-head">
+        <span class="num">18</span>
+        <span class="meta">December 2026<br>Friday</span>
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+
+          <img
+            src="./images/groom-haldi.jpg"
+            alt="Groom Haldi"
+            loading="eager"
+            decoding="async">
+
+          <h3>Groom&rsquo;s Haldi Ceremony</h3>
+          <p class="time">10:00 AM</p>
+          <p class="where">At Home</p>
+
+        </article>
+
+        <article class="card">
+
+          <img
+            src="./images/bride-groom-haldi.jpg"
+            alt="Bride and Groom Haldi"
+            loading="eager"
+            decoding="async">
+
+          <h3>Bride &amp; Groom Haldi Ceremony</h3>
+          <p class="time">5:30 PM</p>
+          <p class="where">Motel Ahilya Lawns</p>
+
+        </article>
+
+        <article class="card">
+
+          <img
+            src="./images/dj-night.jpg"
+            alt="DJ Night Party"
+            loading="eager"
+            decoding="async">
+
+          <h3>DJ Night</h3>
+          <p class="time">7:30 PM</p>
+          <p class="where">Motel Ahilya Lawns</p>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 19 DECEMBER -->
+    <section class="day">
+
+      <div class="day-head">
+        <span class="num">19</span>
+        <span class="meta">December 2026<br>Saturday</span>
+      </div>
+
+      <div class="cards">
+
+        <article class="card feature">
+
+          <img
+            src="./images/vaidik.jpg"
+            alt="Vaidik Wedding"
+            loading="eager"
+            decoding="async">
+
+          <h3>Vaidik Wedding Ceremony</h3>
+          <p class="time">8:33 AM</p>
+          <p class="where">Motel Ahilya Lawns</p>
+
+        </article>
+
+        <article class="card feature">
+
+          <img
+            class="focus-top" src="./images/reception.jpg"
+            alt="Baraat and Reception"
+            loading="eager"
+            decoding="async">
+
+          <h3>Baraat &amp; Reception</h3>
+          <p class="time">8:30 PM</p>
+          <p class="where">Motel Ahilya Lawns</p>
+
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- VENUE -->
+  <section class="venue" id="venue">
+
+    <div class="venue-text">
+
+      <p class="chip">Venue</p>
+
+      <h2>Motel Ahilya Lawns</h2>
+
+      <p class="city">Shirpur, Dhule</p>
+
+      <address>
+        Behind MLA Residence / Near Malhar Nagar,<br>
+        New Bypass Road, Varvade / Karvand,<br>
+        Shirpur, District Dhule, Maharashtra 425405
+      </address>
+
+      <a
+        class="btn"
+        target="_blank"
+        rel="noopener"
+        href="https://www.google.com/maps/search/?api=1&query=Motel+Ahilya+Lawns+Shirpur+Dhule">
+
+        Open in Google Maps
+
+      </a>
+
+    </div>
+
+    <img
+      class="venue-img"
+      src="./images/venue.jpg"
+      alt="Motel Ahilya Lawns decorated for the wedding"
+      loading="eager"
+      decoding="async">
+
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp" id="rsvp">
+    <h2 class="section-title">RSVP &amp; Contact</h2>
+    <div class="divider"><i></i></div>
+    <p class="rsvp-lead">Kindly confirm your presence, or reach us for any query.</p>
+    <div class="rsvp-actions">
+      <a class="btn" id="waBtn" target="_blank" rel="noopener" href="#">Confirm on WhatsApp</a>
+      <a class="btn btn-outline" id="callBtn" href="#">Call the hosts</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p class="blessing">Your gracious presence, love, and blessings are the greatest gifts we could ever receive.</p>
+
+    <p class="regards">With love and warm regards,</p>
+    <p class="script">Mayur &amp; Ashwini</p>
+    <p class="together">Together with our families</p>
+
+  </footer>
+
+  <script src="./config.js"></script>
+  <script src="./invite.js"></script>
+
+</body>
+</html>
